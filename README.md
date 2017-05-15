@@ -11,3 +11,8 @@ Concurrent Programming <br/>
     - Shouldn't remote threads than the hardware can support (Oversubscription)
         - create lots of contact switching
         - degrade the performance
+
+Avoiding Data Race
+Markup : 1. Use mutex to synchronize data access
+         2. Never leak a handle of data to outside
+         3. Design interface appropriately
