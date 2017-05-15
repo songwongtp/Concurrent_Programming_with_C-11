@@ -39,6 +39,6 @@ https://www.youtube.com/playlist?list=PL5jc9xFGsL8E12so1wlMS0r0hTQoJL74M
 
 ### Locking Granularity (Locking of a resource should happen at an appropriate granularity)
 - Fine-grained lock:    protects small amount of
-    - locking 2 of this increases a chance of deadlock
+    - locking 2 of this will increase a chance of deadlock
 - Coarse-grained lock:  protects big amount of data
-    - locking 2 of this lower the opportunity of parallel computing
+    - locking 2 of this will decrease the opportunity of parallel computing
