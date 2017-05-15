@@ -1,5 +1,5 @@
 /* Songwong Tasneeyapant
- * C++ Threading #1: Intoduction
+ * C++ Threading #1: Introduction
 */
 
 #include <iostream>
