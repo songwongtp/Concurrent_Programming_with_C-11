@@ -24,3 +24,21 @@ https://www.youtube.com/playlist?list=PL5jc9xFGsL8E12so1wlMS0r0hTQoJL74M
 1. Use mutex to synchronize data access
 2. Never leak a handle of data to outside
 3. Design interface appropriately
+
+### Avoiding Deadlock
+1. Prefer locking single mutex at a time
+2. Avoid locking a mutex and then calling user provided function
+    - You don't know what the function will do. It might lock another mutex
+    - Then you will end up having two mutexes being locked
+    - Or it might try to lock the same mutex again
+3. If necessary, use std::lock() to lock more than one mutex
+    - std::lock() provides some deadlock avoidance algorithm to lock the mutex
+4. If using std::lock() is not possible, lock the mutex in same order for all
+    - Or provide a hierarchy of mutexes so that when a thread is holding a lower
+    level mutex, it is not allowed to lock a higher level
+
+### Locking Granularity (Locking of a resource should happen at an appropriate granularity)
+- Fine-grained lock:    protects small amount of
+    - locking 2 of this increases a chance of deadlock
+- Coarse-grained lock:  protects big amount of data
+    - locking 2 of this lower the opportunity of parallel computing
