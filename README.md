@@ -13,6 +13,6 @@ Concurrent Programming <br/>
         - degrade the performance
 
 Avoiding Data Race
-    1. Use mutex to synchronize data access
-    2. Never leak a handle of data to outside
-    3. Design interface appropriately
+1. Use mutex to synchronize data access
+2. Never leak a handle of data to outside
+3. Design interface appropriately
