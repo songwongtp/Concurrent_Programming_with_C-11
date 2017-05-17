@@ -45,6 +45,7 @@ int main() {
     // ... 10 threads
 
     // Approach 2: shared_future (unlike regular future, shared_future can be copied
+    // very convenient for a broadcast, kind of, communication model
     std::shared_future<int> sf = f.share();
     std::future<int> fu = std::async(std::launch::async, factorial, sf);
 
