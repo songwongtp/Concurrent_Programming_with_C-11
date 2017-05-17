@@ -42,6 +42,9 @@ https://www.youtube.com/playlist?list=PL5jc9xFGsL8E12so1wlMS0r0hTQoJL74M
 - Coarse-grained lock:  protects big amount of data
     - locking 2 of this will decrease the opportunity of parallel computing
 
-
+### 3 ways to get a future
+1. promise::get_future()
+2. packaged_task::get_future()
+3. async() returns a future
 
 #### by Bo Qian (http://boqian.weebly.com)
