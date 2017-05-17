@@ -41,7 +41,7 @@ int main() {
     // ...
     // std::future<int> fu = std::async(std::launch::async, factorial, std::ref(f));
     // std::future<int> fu2 = std::async(std::launch::async, factorial, std::ref(f));
-    // std::future<int> fu3 = std::async(std::launch::async, factorial, std::ref(f
+    // std::future<int> fu3 = std::async(std::launch::async, factorial, std::ref(f));
     // ... 10 threads
 
     // Approach 2: shared_future (unlike regular future, shared_future can be copied
